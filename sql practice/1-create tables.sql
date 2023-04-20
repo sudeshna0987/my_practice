@@ -14,3 +14,12 @@ create table employee
     employee_code int
 ) 
 
+IF  NOT EXISTS (SELECT * FROM sys.objects 
+WHERE object_id = OBJECT_ID(N'[dbo].[project]') AND type in (N'U'))
+
+create table project
+(
+    id int IDENTITY,
+    [name] varchar(200),              -- name is an identifier in sql that is why name is enclosed with square braces'[]' 
+    depa_id int 
+)
