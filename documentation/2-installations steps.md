@@ -23,3 +23,7 @@ v11.0
 - the output should be like response below  
 MyLocalDbInstance
 v11.0
+```
+adding sql server extension in vs code
+```
+- go to extensions in the vs code from that we need to install sql server extension
