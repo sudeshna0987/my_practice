@@ -27,3 +27,13 @@ v11.0
 adding sql server extension in vs code
 ```
 - go to extensions in the vs code from that we need to install sql server extension
+```
+creating sql server extension connections
+```
+- open the sql server extension
+- click on add connections
+ - type your server name like '(localdb)\instance name'
+ - enter database name
+ - authentication type(integrated)
+ - profile name(connection name)
+- after we created the connection it shows on the top of the left side in the sql server extension
