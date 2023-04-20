@@ -1,3 +1,7 @@
+-- Check for verying if table is already present
+IF  NOT EXISTS (SELECT * FROM sys.objects 
+WHERE object_id = OBJECT_ID(N'[dbo].[employee]') AND type in (N'U'))
+-- query to add employee table
 create table employee
 (
     e_id int,
