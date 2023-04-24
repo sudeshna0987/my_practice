@@ -23,3 +23,45 @@ create table project
     [name] varchar(200),              -- name is an identifier in sql that is why name is enclosed with square braces'[]' 
     depa_id int 
 )
+
+
+IF  NOT EXISTS (SELECT * FROM sys.objects 
+WHERE object_id = OBJECT_ID(N'[dbo].[department]') AND type in (N'U'))
+
+create table department
+(
+    id int,
+    [name] varchar(200),            
+    code varchar(150)
+)
+
+IF  NOT EXISTS (SELECT * FROM sys.objects 
+WHERE object_id = OBJECT_ID(N'[dbo].[projectlevel]') AND type in (N'U'))
+
+
+create table projectlevel
+(
+    id int,
+    [name] varchar(200),
+    code varchar(150)
+)
+
+IF  NOT EXISTS (SELECT * FROM sys.objects 
+WHERE object_id = OBJECT_ID(N'[dbo].[manager]') AND type in (N'U'))
+
+create table manager
+(
+    e_id int,
+    p_id int,
+)
+
+IF  NOT EXISTS (SELECT * FROM sys.objects 
+WHERE object_id = OBJECT_ID(N'[dbo].[servicehistory]') AND type in (N'U'))
+
+
+create table servicehistory
+(
+    e_id int,
+    startdate int,
+    enddate int
+)
